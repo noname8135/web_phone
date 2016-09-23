@@ -164,7 +164,7 @@ function handleRemoteStreamRemoved(event) {
 }
 
 function init(){  //initialize all elements
-
+  msg_area.innerHTML = 'Waiting for call..';
 }
 
 function hangup(from_remote){
@@ -184,6 +184,7 @@ function gotStream(stream) {
     maybeStart();
   }
 }
+init();
 
 navigator.mediaDevices.getUserMedia({
   audio: true,
